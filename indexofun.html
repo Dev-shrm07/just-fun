@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PadduPandey.com</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: rgb(17, 17, 73);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .box {
+        width: 60%;
+        height: 70%;
+        background-color: rgb(255, 120, 79);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .text {
+        font-size: 2rem;
+        font-weight: 700;
+        color: rgb(255, 248, 241);
+        animation-name: booby;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes booby {
+        from {
+          transform: scale(1) ;
+        }
+        to {
+          transform: scale(1.6) translateY(3rem);
+        }
+        from {
+          transform: scale(1) translateY(-3rem);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <p class="text">
+          Welcome!! Mr. <span id="result"></span> to our site
+        </p>
+      </div>
+    </div>
+  </body>
+  <script>
+    
+    startx = () => {
+      let z = prompt('enter your first name');
+      let str = z.toLowerCase();
+      if(str == 'madhav'){
+        document.getElementById('result').innerHTML = 'booby';
+      }
+      else if(str == 'mukund'){
+        document.getElementById('result').innerHTML = 'galattiming';
+      }
+      else{
+        document.getElementById('result').innerHTML = str;
+      }
+
+    }
+    window.onload = startx();
+  </script>
+</html>
